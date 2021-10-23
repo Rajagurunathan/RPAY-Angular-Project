@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="assets/css/pricing-plan.css"> -->
+      </head>
+     
+      <body>
+          
+    <header class="pricing-table-header">
+        <div class="container">
+          <h5 class="text-center">PRICING PLAN</h5>
+          <h1 class="text-center pricing-table-title">Pricing Table</h1>
+            <div class="list-group list-group-horizontal pricing-plans-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="monthly-plans-tab" data-toggle="list" href="#monthly-plans" role="tab" aria-controls="monthly-plans" aria-selected="true">All Plans</a>
+                
+                <a class="list-group-item list-group-item-action" id="airtel-pp-tab" data-toggle="list" href="#airtel-popular-plans" role="tab" aria-controls="airtel-popular-plans" aria-selected="false">Popular Plans</a>
+                <a class="list-group-item list-group-item-action" id="airtel-tt-tab" data-toggle="list" href="#airtel-talk-time" role="tab" aria-controls="airtel-talk-time" aria-selected="false">Talk Time</a>
+                <a class="list-group-item list-group-item-action" id="airtel-dv-tab" data-toggle="list" href="#annual-data-voucher" role="tab" aria-controls="airtel-dv-tab" aria-selected="false">Data Voucher</a>
+                <a class="list-group-item list-group-item-action" id="airtel-rm-tab" data-toggle="list" href="#annual-roaming" role="tab" aria-controls="airtel-rm-tab" aria-selected="false">International Roaming</a>
+            
+            
+            </div>
+  
+        </div>
+      </header>
+
+
+    <div class="container">
+        <div class="tab-content pricing-tab-content" id="pills-tabContent">
+
+          <div class="tab-pane show" id="monthly-plans" role="tabpanel" aria-labelledby="monthly-plans-tab">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let air of lstjioplans">
+                <div class="card pricing-card text-center shadow border-0">
+                  <div class="card-header">
+                    
+                    <h3 class="pricing-plan-cost">{{air.plan_name.substring(3)}}</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul class="pricing-plan-features">
+                      <li>{{air.plan_type}}</li>
+                      <li>{{air.plan_description}}</li>
+                      <li>Price : Rs.{{air.amount}}</li>
+                      <li>Validity : {{air.validity}} days</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane show" id="airtel-popular-plans" role="tabpanel" aria-labelledby="airtel-pp-tab">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let pp of lstjioPP">
+                <div class="card pricing-card text-center shadow border-0">
+                  <div class="card-header">
+                    <h3 class="pricing-plan-cost">{{pp.plan_name.substring(3)}}</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul class="pricing-plan-features">
+                      <li>{{pp.plan_type}}</li>
+                      <li>{{pp.plan_description}}</li>
+                      <li>Price: Rs.{{pp.amount}}</li>
+                      <li>Validity: {{pp.validity}} days</li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="tab-pane show" id="airtel-talk-time" role="tabpanel" aria-labelledby="airtel-tt-tab">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let tt of lstjioTT">
+                <div class="card pricing-card text-center shadow border-0">
+                  <div class="card-header">
+                    <h3 class="pricing-plan-cost">{{tt.plan_name.substring(3)}}</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul class="pricing-plan-features">
+                      <li>{{tt.plan_type}}</li>
+                      <li>{{tt.plan_description}}</li>
+                      <li>Price: Rs.{{tt.amount}}</li>
+                      <li>Validity: {{tt.validity}} days</li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="tab-pane show" id="annual-data-voucher" role="tabpanel" aria-labelledby="airtel-dv-tab">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let data of lstjioData">
+                <div class="card pricing-card text-center shadow border-0">
+                  <div class="card-header">
+                    <h3 class="pricing-plan-cost">{{data.plan_name.substring(3)}}</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul class="pricing-plan-features">
+                      <li>{{data.plan_type}}</li>
+                      <li>{{data.plan_description}}</li>
+                      <li>Price: Rs.{{data.amount}}</li>
+                      <li>Validity: {{data.validity}} days</li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="tab-pane show" id="annual-roaming" role="tabpanel" aria-labelledby="airtel-rm-tab">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let roaming of lstjioRoaming">
+                <div class="card pricing-card text-center shadow border-0">
+                  <div class="card-header">
+                    
+                    <h3 class="pricing-plan-cost">{{roaming.plan_name.substring(5)}}</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul class="pricing-plan-features">
+                      <li>{{roaming.plan_type}}</li>
+                      <li>{{roaming.plan_description}}</li>
+                      <li>Price: Rs.{{roaming.amount}}</li>
+                      <li>Validity: {{roaming.validity}} days</li>
+                     
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+    
+
+      <footer class="pricing-table-footer">
+        Interested in custom plan? <a href="#!"> get in touch</a>
+    </footer>
+
+
+
+      </body>
+      
+
+</html>

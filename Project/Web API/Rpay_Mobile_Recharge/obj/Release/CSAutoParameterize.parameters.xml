@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="mainconRC-Web.config Connection String" description="mainconRC Connection String used in web.config by the application to access the database." defaultValue="Data Source=mssql.mrwhitehost.in;Initial Catalog=rpay;Persist Security Info=True;User ID=rpaybase;Password=5$Z00gmb;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\sarav\\Documents\\Angular\\Rpay_Mobile_Recharge\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='mainconRC']/@connectionString" />
+  </parameter>
+</parameters>
